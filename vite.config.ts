@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import { reactRouter } from "@react-router/dev/vite";
 import autoprefixer from "autoprefixer";
 import tailwindcss from "tailwindcss";
@@ -16,12 +16,12 @@ export default defineConfig({
     reactRouter(),
     tsconfigPaths(),
     serverAdapter({
-      entry: "server/index.ts"
-    })
+      entry: "server/index.ts",
+    }),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./app")
-    }
-  }
+      "@": path.resolve(__dirname, "./app"),
+    },
+  },
 });
