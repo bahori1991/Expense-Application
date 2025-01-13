@@ -4,6 +4,9 @@ import { api } from "@/lib/api";
 
 export async function loader() {
   const res = await api.expenses["total-spent"].$get();
+  if (!res.ok) {
+    throw new Error("Server Error has occurred when getting total spent.");
+  }
   const total = await res.json();
   return total;
 }
