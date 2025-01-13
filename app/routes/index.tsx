@@ -1,8 +1,9 @@
 import type { Route } from "./+types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { api } from "@/lib/api";
 
 export async function loader() {
-  const res = await fetch("http://localhost:5173/api/expenses/total-spent");
+  const res = await api.expenses["total-spent"].$get();
   const total = await res.json();
   return total;
 }

@@ -6,10 +6,7 @@ const app = new Hono();
 
 app.use("*", logger());
 
-app.get("/test", (c) => {
-  return c.json({ message: "test" });
-});
-
-app.route("/api/expenses", expenseRoute);
+const apiRoutes = app.basePath("/api").route("/expenses", expenseRoute);
 
 export default app;
+export type ApiRoutes = typeof apiRoutes;
