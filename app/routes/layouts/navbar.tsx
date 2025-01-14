@@ -9,7 +9,7 @@ const NavbarItems: { key: number; name: string; url: string }[] = [
 
 export default function Navbar() {
   const navigation = useNavigation();
-  const isNavigating = Boolean(navigation.location);
+  const isNavigating = navigation.state === "loading";
   return (
     <>
       <div className="p-2 flex gap-2">

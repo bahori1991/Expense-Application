@@ -10,7 +10,7 @@ const expenseSchema = z.object({
 
 type Expense = z.infer<typeof expenseSchema>;
 
-const createPostSchema = expenseSchema.omit({ id: true });
+export const createPostSchema = expenseSchema.omit({ id: true });
 
 const fakeExpenses: Expense[] = [
   { id: 1, title: "Groceries", amount: 50 },

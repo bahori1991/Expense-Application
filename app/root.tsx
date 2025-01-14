@@ -28,7 +28,6 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap",
   },
-  { rel: "stylesheet", href: stylesheet },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -39,6 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        <link rel="stylesheet" href={stylesheet} />
       </head>
       <body className="min-h-screen vsc-initialized">
         {children}
