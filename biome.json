@@ -22,6 +22,11 @@
       "recommended": true
     }
   },
+  "json": {
+    "formatter": {
+      "indentStyle": "space"
+    }
+  },
   "javascript": {
     "formatter": {
       "quoteStyle": "double",
