@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Form, redirect, useNavigation } from "react-router";
 import type { Route } from "./+types/create-expense";
 import { api } from "@/lib/api";
-import { createPostSchema } from "@server/expenses";
+import { createPostSchema } from "@server/routes/expenses";
 
 export async function action({ request }: Route.ActionArgs) {
   const formData = await request.formData();

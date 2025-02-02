@@ -5,6 +5,7 @@ const NavbarItems: { key: number; name: string; url: string }[] = [
   { key: 2, name: "About", url: "/about" },
   { key: 3, name: "Expenses", url: "/expenses" },
   { key: 4, name: "Create", url: "/create-expense" },
+  { key: 5, name: "Profile", url: "/profile" },
 ];
 
 export default function Navbar() {

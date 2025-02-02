@@ -9,3 +9,7 @@ Content-Type: application/json
   "title": "some expense",
   "amount": 1234
 }
+
+###
+
+http://localhost:5173/profile
